@@ -1,0 +1,42 @@
+import pandas as pd
+
+df = pd.read_csv('pokemon_data.csv')
+
+print (df.head(3))
+
+print(df['Name'])
+
+print(df[['Name', 'Type 1', 'HP']])
+
+print(df.iloc[1:4]) 
+
+df.loc[df['Type 1'] == "Fire"]
+
+df.describe() 
+
+df.sort_values('Name') 
+
+df.sort_values(['Type 1', 'HP'], ascending=False)
+
+df.sort_values(['Type 1', 'HP'], ascending=[1,0]) 
+
+df['Total'] = df['HP'] + df['Attack'] + df['Defense'] +df['Sp. Atk'] + df['Sp. Def'] + df['Speed'] 
+df.head(5)
+
+
+df['Total'] = df['HP'] + df['Attack'] + df['Defense'] +df['Sp. Atk'] + df['Sp. Def'] + df['Speed']
+df = df.drop(columns=['Total'])
+df.head(5)
+
+df.to_csv('modified.csv')
+
+ df.to_excel('modified.xlsx', index=False)
+
+df.loc[(df['Type 1'] == 'Grass') & (df ['Type 2'] == 'Poison')]
+
+df.loc[df['Type 1']  == 'Fire', 'Type 1'] = 'Fire'
+df
+
+df = pd.read_csv('pokemon_data.csv')
+
+df.groupby(['Type 1']).mean().sort_values('Attack', ascending=False)
