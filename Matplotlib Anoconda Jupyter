@@ -149,7 +149,7 @@ plt.legend()
 plt.plt.show()
 
 
-#pie plot
+#pie chart
 
 import matplotlib.pyplot as plt
 
