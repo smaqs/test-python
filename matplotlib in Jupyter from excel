@@ -1,0 +1,21 @@
+#importing csv or excel file
+
+import pandas as pd
+pd.read_excel('soc_data.xlsx')
+pd.read_excel('soc_data.xlsx', index_col=0)
+pd.read_excel('soc_data.xlsx', index_col=0, header=0)
+pd.read_excel('soc_data.xlsx', index_col=0, header=0, usecols="A:C")
+
+#creating matplotlib graph from excel/csv file
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plot
+
+df = pd.read_excel('soc_data.xlsx', index_col=0, header=0, usecols="A:E")
+print(df)
+
+df.plot.bar()
+
+matplotlib inline
+
