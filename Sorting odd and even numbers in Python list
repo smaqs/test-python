@@ -1,0 +1,21 @@
+#For odd numbers:
+
+list1= [1,5,11,23,12,18,26,93,44] 
+for num in list1:
+    if num % 2 == 1:
+       print(num, end = " ")
+
+
+#For even numbers
+
+list1= [1,5,11,23,12,18,26,93,44] 
+for num in list1:
+    if num % 2 == 0:
+       print(num, end = " ")
+
+#sorting number/list
+
+list1= [1,5,11,23,12,18,26,93,44] 
+list1.sort()
+print("sorted list is ",list1)
+print("mid value is ",list[int(len(list1)/2)])
